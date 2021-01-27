@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "GoXLRVolume": {
+      "commandName": "Project",
+      "commandLineArgs": "hermam 75"
+    }
+  }
+}
