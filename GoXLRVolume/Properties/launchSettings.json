@@ -2,7 +2,7 @@
   "profiles": {
     "GoXLRVolume": {
       "commandName": "Project",
-      "commandLineArgs": "hermam 75"
+      "commandLineArgs": "music 75"
     }
   }
 }

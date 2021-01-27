@@ -27,7 +27,7 @@ namespace GoXLRVolume
           
             MMDeviceEnumerator enumerator = new MMDeviceEnumerator();
 
-            var device = enumerator.EnumerateAudioEndPoints(DataFlow.All, DeviceState.Active)
+            var device = enumerator.EnumerateAudioEndPoints(DataFlow.Render, DeviceState.Active)
                 .Where<MMDevice>(d => d.DeviceFriendlyName.Equals("TC-Helicon GoXLR"))
                 .FirstOrDefault<MMDevice>(i => i.FriendlyName.ToLower().StartsWith(deviceName));
 
@@ -35,7 +35,7 @@ namespace GoXLRVolume
 
             if (doTerminate) return;
 
-            Console.WriteLine("Setting {0} to volume {1}", device.FriendlyName, volumeInt / 100);            
+            Console.WriteLine("Setting {0} to volume {1}%", device.FriendlyName, volumeInt);            
             device.AudioEndpointVolume.MasterVolumeLevelScalar = volumeInt / 100;
             
         }
