@@ -13,3 +13,5 @@ Usage:
 
 Example:
 `goxlrvolume music 50`
+
+![Stream Deck example](https://i.imgur.com/LCnqTva.png)
